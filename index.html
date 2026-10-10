@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Reanty - Find the best Real Estate on your country."
+    />
+    <title>Reanty | Find the best Real Estate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- SVG icon sprite (inline so it also works when opened from the file system) -->
+    <svg
+      class="visually-hidden"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="i-mail" viewBox="0 0 16 13">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+          d="M1.5 1h13a.8.8 0 0 1 .8.8v9.4a.8.8 0 0 1-.8.8h-13a.8.8 0 0 1-.8-.8V1.8a.8.8 0 0 1 .8-.8Zm-.6.5L8 7l7.1-5.5"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 14 17">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+          d="M7 16s6-5.3 6-9.5A6 6 0 0 0 1 6.5C1 10.7 7 16 7 16Z"
+        />
+        <circle
+          cx="7"
+          cy="6.5"
+          r="2.2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+        />
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 8 14">
+        <path
+          fill="currentColor"
+          d="M5.2 14V7.6h2.1l.3-2.5H5.2V3.5c0-.7.2-1.2 1.2-1.2H7.7V.1A17 17 0 0 0 5.8 0C4 0 2.7 1.1 2.7 3.2v1.9H.6v2.5h2.1V14h2.5Z"
+        />
+      </symbol>
+      <symbol id="i-twitter" viewBox="0 0 16 13">
+        <path
+          fill="currentColor"
+          d="M16 1.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8A3.3 3.3 0 0 0 7.8 4 9.3 9.3 0 0 1 1.1.6a3.3 3.3 0 0 0 1 4.4c-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2a3.3 3.3 0 0 1-1.5.1 3.3 3.3 0 0 0 3.1 2.3A6.6 6.6 0 0 1 0 11.5 9.3 9.3 0 0 0 5 13c6 0 9.4-5 9.4-9.4v-.4c.6-.5 1.2-1 1.6-1.7Z"
+        />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 14 14">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+          d="M4 .8h6A3.2 3.2 0 0 1 13.2 4v6a3.2 3.2 0 0 1-3.2 3.2H4A3.2 3.2 0 0 1 .8 10V4A3.2 3.2 0 0 1 4 .8Z"
+        />
+        <circle
+          cx="7"
+          cy="7"
+          r="2.9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <circle cx="10.6" cy="3.4" r=".9" fill="currentColor" />
+      </symbol>
+      <symbol id="i-youtube" viewBox="0 0 18 13">
+        <path
+          fill="currentColor"
+          d="M17.6 2A2.3 2.3 0 0 0 16 .4C14.6 0 9 0 9 0S3.4 0 2 .4A2.3 2.3 0 0 0 .4 2 24 24 0 0 0 0 6.5 24 24 0 0 0 .4 11 2.3 2.3 0 0 0 2 12.6c1.4.4 7 .4 7 .4s5.6 0 7-.4a2.3 2.3 0 0 0 1.6-1.6 24 24 0 0 0 .4-4.5 24 24 0 0 0-.4-4.5ZM7.2 9.3V3.7l4.7 2.8-4.7 2.8Z"
+        />
+      </symbol>
+      <symbol id="i-pinterest" viewBox="0 0 14 14">
+        <path
+          fill="currentColor"
+          d="M7 0a7 7 0 0 0-2.6 13.5c0-.6 0-1.4.2-2l.9-3.8s-.2-.5-.2-1.1c0-1 .6-1.8 1.4-1.8.6 0 1 .5 1 1.1 0 .7-.5 1.7-.7 2.6-.2.8.4 1.4 1.2 1.4 1.4 0 2.4-1.8 2.4-4 0-1.7-1.1-2.9-3.1-2.9a3.6 3.6 0 0 0-3.7 3.6c0 .7.2 1.1.5 1.5.1.1.1.2.1.3l-.1.6c0 .2-.2.2-.3.1-1-.4-1.5-1.5-1.5-2.8 0-2 1.8-4.5 5.2-4.5 2.8 0 4.6 2 4.6 4.2 0 2.9-1.6 5-4 5-.8 0-1.5-.4-1.8-.9l-.5 2c-.2.6-.5 1.3-.8 1.8A7 7 0 1 0 7 0Z"
+        />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 12 12">
+        <path
+          fill="currentColor"
+          d="M2.7 12H.2V4h2.5v8ZM1.4 2.9a1.4 1.4 0 1 1 0-2.9 1.4 1.4 0 0 1 0 2.9ZM12 12H9.5V8.1c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2V12H4.2V4h2.4v1.1c.3-.6 1.2-1.3 2.4-1.3C11.5 3.8 12 5.4 12 7.6V12Z"
+        />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 8 14">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m1 1 6 6-6 6"
+        />
+      </symbol>
+      <symbol id="i-play" viewBox="0 0 12 14">
+        <path
+          fill="currentColor"
+          d="M11.3 6.1a1 1 0 0 1 0 1.8L1.5 13.6A1 1 0 0 1 0 12.7V1.3A1 1 0 0 1 1.5.4l9.8 5.7Z"
+        />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 23">
+        <path
+          fill="currentColor"
+          d="m12 0 3.7 7.5 8.3 1.2-6 5.8 1.4 8.3L12 18.9l-7.4 3.9L6 14.5 0 8.7l8.3-1.2L12 0Z"
+        />
+      </symbol>
+      <symbol id="i-arrow-long" viewBox="0 0 24 12">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M1 6h22m-5-5 5 5-5 5"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 12 11">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M1 5.5h10M6.5 1l4.5 4.5L6.5 10"
+        />
+      </symbol>
+      <symbol id="i-dot-arrow-left" viewBox="0 0 16 10">
+        <path
+          fill="currentColor"
+          d="M15 5.6H8.6V9a.6.6 0 0 1-1 .4L2.7 5.5a.6.6 0 0 1 0-1L7.6.6a.6.6 0 0 1 1 .5v3.3H15a.6.6 0 0 1 0 1.2Z"
+        />
+      </symbol>
+      <symbol id="i-dot-arrow-right" viewBox="0 0 16 10">
+        <path
+          fill="currentColor"
+          d="M1 4.4h6.4V1a.6.6 0 0 1 1-.4l4.9 3.9a.6.6 0 0 1 0 1L8.4 9.4a.6.6 0 0 1-1-.5V5.6H1a.6.6 0 0 1 0-1.2Z"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 14 11">
+        <path
+          fill="currentColor"
+          d="M5 10.6.4 6.1a1.2 1.2 0 0 1 1.7-1.7L5 7.3 11.9.4a1.2 1.2 0 0 1 1.7 1.7L5 10.6Z"
+        />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 15 14">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.1"
+          d="M1.5 2h12a1 1 0 0 1 1 1v9.5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Zm-1 3.5h14M4.5 0v3.5m6-3.5v3.5"
+        />
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 12 14">
+        <circle
+          cx="6"
+          cy="3.6"
+          r="3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.1"
+        />
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.1"
+          d="M.6 13.4a5.4 5.4 0 0 1 10.8 0H.6Z"
+        />
+      </symbol>
+      <symbol id="i-bookmark" viewBox="0 0 11 14">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.1"
+          d="M.6.6h9.8v12.6L5.5 9.6.6 13.2V.6Z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container container--wide topbar__inner">
+          <ul class="topbar__contact">
+            <li class="topbar__item">
+              <svg class="topbar__icon" width="16" height="13">
+                <use href="#i-mail"></use>
+              </svg>
+              <a href="mailto:Info@webmail.com">Info@webmail.com</a>
+            </li>
+            <li class="topbar__item">
+              <svg class="topbar__icon" width="14" height="17">
+                <use href="#i-pin"></use>
+              </svg>
+              <span>547 ns tower St. anglo City, USA</span>
+            </li>
+          </ul>
+          <ul class="social topbar__social">
+            <li>
+              <a class="social__link" href="#" aria-label="Facebook"
+                ><svg width="8" height="14"><use href="#i-facebook"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="social__link is-active" href="#" aria-label="Twitter"
+                ><svg width="16" height="13"><use href="#i-twitter"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="social__link" href="#" aria-label="Instagram"
+                ><svg width="14" height="14">
+                  <use href="#i-instagram"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="social__link" href="#" aria-label="Youtube"
+                ><svg width="18" height="13"><use href="#i-youtube"></use></svg
+              ></a>
+            </li>
+            <li>
+              <a class="social__link" href="#" aria-label="Pinterest"
+                ><svg width="14" height="14">
+                  <use href="#i-pinterest"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="navbar">
+        <div class="container container--wide navbar__inner">
+          <a class="navbar__logo" href="./">
+            <img
+              src="assets/images/logo.png"
+              width="166"
+              height="58"
+              alt="Reanty."
+            />
+          </a>
+
+          <input class="navbar__toggle-input" type="checkbox" id="nav-toggle" />
+          <label
+            class="navbar__toggle"
+            for="nav-toggle"
+            aria-label="Toggle menu"
+          >
+            <span></span><span></span><span></span>
+          </label>
+
+          <nav class="navbar__menu" aria-label="Main">
+            <ul class="navbar__list">
+              <li><a class="navbar__link is-active" href="#">Home</a></li>
+              <li><a class="navbar__link" href="#about">About</a></li>
+              <li><a class="navbar__link" href="#feature">Feature</a></li>
+              <li><a class="navbar__link" href="#market">Market</a></li>
+              <li><a class="navbar__link" href="#services">Services</a></li>
+              <li><a class="navbar__link" href="#contact">Contact</a></li>
+            </ul>
+            <div class="navbar__actions">
+              <a class="navbar__login" href="#">Log In</a>
+              <a class="btn btn--primary navbar__signup" href="#">Sign Up</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="container container--wide hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Find the best Real Estate on your country .
+            </h1>
+            <svg
+              class="hero__squiggle"
+              width="280"
+              height="170"
+              viewBox="0 0 280 170"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 30C30 75 62 122 118 130C150 134 168 118 167 95C166 74 154 64 140 64C124 64 113 78 114 96C115 116 128 130 150 132C185 135 220 130 246 124"
+                stroke="#FF5A3C"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M232 115L247 124L235 137"
+                stroke="#FF5A3C"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="hero__desc">
+              With over 1 million homes for sale available on the website,
+              Renting can match you with a house.
+            </p>
+            <a class="btn btn--primary hero__btn" href="#">
+              Start membership
+              <svg class="btn__icon"><use href="#i-chevron"></use></svg>
+            </a>
+
+            <div class="thumbs hero__thumbs">
+              <ul class="thumbs__list">
+                <li class="thumbs__item thumbs__item--lg">
+                  <span class="thumbs__label">HOUSE 1</span>
+                </li>
+                <li class="thumbs__item thumbs__item--md">
+                  <span class="thumbs__label">HOUSE 2</span>
+                </li>
+                <li class="thumbs__item thumbs__item--md">
+                  <span class="thumbs__label">HOUSE 3</span>
+                </li>
+              </ul>
+              <div class="thumbs__nav">
+                <span class="thumbs__progress"></span>
+                <span class="thumbs__page is-active">1</span>
+                <span class="thumbs__page">2</span>
+                <span class="thumbs__page">3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <img
+              class="media hero__image"
+              src="assets/images/placeholder.svg"
+              width="867"
+              height="703"
+              alt="Modern house"
+            />
+            <div class="stat-card hero__stat">
+              <img
+                class="stat-card__icon"
+                src="assets/icons/revenue.png"
+                width="48"
+                height="58"
+                alt=""
+              />
+              <p class="stat-card__value">$7454.21</p>
+              <p class="stat-card__label">Revenue</p>
+            </div>
+            <a class="hero__video" href="#">
+              How it works
+              <span class="hero__play"
+                ><svg width="12" height="14"><use href="#i-play"></use></svg
+              ></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GUIDES ================= -->
+      <section class="guides" id="about">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title">
+              Commercial Real Estate <br />And Office
+            </h2>
+            <p class="section-head__desc">
+              Work with Renting brokers who help you to get started with smart
+              tools to.
+            </p>
+          </div>
+
+          <ul class="guides__list">
+            <li class="guide-card">
+              <img
+                class="guide-card__icon"
+                src="assets/icons/guide-buyer.png"
+                width="94"
+                height="94"
+                alt=""
+              />
+              <h3 class="guide-card__title">Buyer Guides</h3>
+              <p class="guide-card__text">
+                Nurture valuable leads into customers, and turn one time.
+              </p>
+            </li>
+            <li class="guide-card is-active">
+              <img
+                class="guide-card__icon"
+                src="assets/icons/guide-renter.png"
+                width="94"
+                height="94"
+                alt=""
+              />
+              <h3 class="guide-card__title">Renter Guides</h3>
+              <p class="guide-card__text">
+                Build brand awareness on the top social media networks.
+              </p>
+            </li>
+            <li class="guide-card">
+              <img
+                class="guide-card__icon"
+                src="assets/icons/guide-seller.png"
+                width="94"
+                height="94"
+                alt=""
+              />
+              <h3 class="guide-card__title">Seller Guides</h3>
+              <p class="guide-card__text">
+                Get professionally-written content that attracts qualified.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= DREAM LIVING ================= -->
+      <section class="dream" id="feature">
+        <div class="container dream__inner">
+          <div class="dream__visual">
+            <img
+              class="media dream__img dream__img--back"
+              src="assets/images/placeholder.svg"
+              width="367"
+              height="561"
+              alt="Living room"
+            />
+            <img
+              class="media dream__img dream__img--front"
+              src="assets/images/placeholder.svg"
+              width="342"
+              height="528"
+              alt="Bedroom"
+            />
+            <div class="dream__badge">
+              <svg width="30" height="29"><use href="#i-star"></use></svg>
+              <span>5 Star Rating</span>
+            </div>
+          </div>
+
+          <div class="dream__content">
+            <div class="section-head section-head--left">
+              <h2 class="section-head__title">
+                Dream Living Spaces Setting New Build
+              </h2>
+              <p class="dream__desc">
+                SeaWire Web is a wireframe kit that has more than 15 popular
+                categories and more than 200 screens
+              </p>
+            </div>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <img
+                  class="feature-item__icon"
+                  src="assets/icons/feature-house.png"
+                  width="56"
+                  height="56"
+                  alt=""
+                />
+                <div>
+                  <h3 class="feature-item__title">The perfect Rsidencye</h3>
+                  <p class="feature-item__text">
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item is-active">
+                <img
+                  class="feature-item__icon"
+                  src="assets/icons/feature-architect.png"
+                  width="56"
+                  height="56"
+                  alt=""
+                />
+                <div>
+                  <h3 class="feature-item__title">Global Arhitect Experts</h3>
+                  <p class="feature-item__text">
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <img
+                  class="feature-item__icon"
+                  src="assets/icons/feature-globe.png"
+                  width="56"
+                  height="56"
+                  alt=""
+                />
+                <div>
+                  <h3 class="feature-item__title">
+                    Built-in a storage capable
+                  </h3>
+                  <p class="feature-item__text">
+                    Take a deep dive and browse origin neighborhood photos.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TODAY SELLS ================= -->
+      <section class="sells">
+        <div class="container sells__inner">
+          <div class="sells__content">
+            <p class="sells__eyebrow">
+              <img
+                src="assets/icons/about-hex.png"
+                width="24"
+                height="24"
+                alt=""
+              />
+              About home
+            </p>
+            <h2 class="section-head__title">Today Sells Properties</h2>
+            <p class="sells__desc">
+              SeaWire Web is a wireframe kit that has more than 15 popular
+              categories and more than 200 screens
+            </p>
+            <ul class="bullet-list">
+              <li class="bullet-list__item">Live Music concert at Newyork</li>
+              <li class="bullet-list__item">
+                Our best boat Tour is j us t for you
+              </li>
+              <li class="bullet-list__item">Live Music concert at Newyork</li>
+              <li class="bullet-list__item">
+                Our best boat Tour is j us t for you
+              </li>
+              <li class="bullet-list__item">Live Music concert at Newyork</li>
+            </ul>
+
+            <div class="thumbs sells__thumbs">
+              <ul class="thumbs__list">
+                <li class="thumbs__item sells__thumb sells__thumb--1">
+                  <span class="thumbs__label">HOUSE 1</span>
+                </li>
+                <li class="thumbs__item sells__thumb sells__thumb--2">
+                  <span class="thumbs__label">HOUSE 2</span>
+                </li>
+                <li class="thumbs__item sells__thumb sells__thumb--3">
+                  <span class="thumbs__label">HOUSE 3</span>
+                </li>
+              </ul>
+              <div class="thumbs__nav thumbs__nav--accent">
+                <span class="thumbs__progress"></span>
+                <span class="thumbs__page is-active">1</span>
+                <span class="thumbs__page">2</span>
+                <span class="thumbs__page">3</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sells__gallery">
+            <img
+              class="media sells__img sells__img--tall"
+              src="assets/images/placeholder.svg"
+              width="311"
+              height="560"
+              alt="House exterior"
+            />
+            <img
+              class="media sells__img"
+              src="assets/images/placeholder.svg"
+              width="259"
+              height="290"
+              alt="Kitchen"
+            />
+            <img
+              class="media sells__img"
+              src="assets/images/placeholder.svg"
+              width="259"
+              height="250"
+              alt="Garden"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SERVICES ================= -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="section-head section-head--poppins">
+            <h2 class="section-head__title services__title">
+              Services provide for you
+            </h2>
+            <p class="section-head__desc services__desc">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration.
+            </p>
+          </div>
+
+          <ul class="services__grid">
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-bed.png"
+                  width="60"
+                  height="48"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Bed Rooms</h3>
+              <p class="service-card__text">
+                Desktop publishing software like aldus page maker including
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-bath.png"
+                  width="62"
+                  height="48"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Swimming pool</h3>
+              <p class="service-card__text">
+                React creative agency amet, consec tetur adipiscing elit.
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-copy.png"
+                  width="52"
+                  height="50"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Copywriting content</h3>
+              <p class="service-card__text">
+                The standard chunk of used since the 1500s is reproduced
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-home.png"
+                  width="56"
+                  height="56"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Smart Home</h3>
+              <p class="service-card__text">
+                The standard chunk of used since the 1500s is reproduced
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-library.png"
+                  width="50"
+                  height="50"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Libarary area</h3>
+              <p class="service-card__text">
+                Desktop publishing software like aldus page maker including
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+            <li class="service-card">
+              <span class="icon-box service-card__icon"
+                ><img
+                  src="assets/icons/service-duty.png"
+                  width="64"
+                  height="56"
+                  alt=""
+              /></span>
+              <h3 class="service-card__title">Responsive Duity</h3>
+              <p class="service-card__text">
+                React creative agency amet, consec tetur adipiscing elit.
+              </p>
+              <a class="link-more" href="#"
+                >Learn more
+                <svg width="12" height="11"><use href="#i-arrow"></use></svg
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= FEATURED PROPERTY ================= -->
+      <section class="featured" id="market">
+        <div class="container">
+          <div class="featured__head">
+            <div class="section-head section-head--left">
+              <h2 class="section-head__title section-head__title--muted">
+                Featured Property
+              </h2>
+              <p class="section-head__desc featured__desc">
+                Find your suitable house here and stay safe and relaxe with
+                pleasure
+              </p>
+            </div>
+            <ul class="tabs" role="tablist">
+              <li>
+                <button
+                  class="tabs__btn is-active"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  Appartment
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tabs__btn"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Vila
+                </button>
+              </li>
+              <li>
+                <button
+                  class="tabs__btn"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Land
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="featured__grid">
+            <li class="property-card is-active">
+              <img
+                class="media property-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="385"
+                alt="The Stokes Appartment"
+              />
+              <div class="property-card__body">
+                <h3 class="property-card__title">The Stokes Appartment</h3>
+                <p class="property-card__location">
+                  <svg width="11" height="13"><use href="#i-pin"></use></svg
+                  >Cleveland, United States
+                </p>
+                <p class="property-card__price">$2,32,120</p>
+                <a
+                  class="property-card__btn"
+                  href="#"
+                  aria-label="View property"
+                  ><svg width="24" height="12">
+                    <use href="#i-arrow-long"></use></svg
+                ></a>
+              </div>
+            </li>
+            <li class="property-card">
+              <img
+                class="media property-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="385"
+                alt="The Stokes Appartment"
+              />
+              <div class="property-card__body">
+                <h3 class="property-card__title">The Stokes Appartment</h3>
+                <p class="property-card__location">
+                  <svg width="11" height="13"><use href="#i-pin"></use></svg
+                  >Cleveland, United States
+                </p>
+                <p class="property-card__price">$2,32,120</p>
+                <a
+                  class="property-card__btn"
+                  href="#"
+                  aria-label="View property"
+                  ><svg width="24" height="12">
+                    <use href="#i-arrow-long"></use></svg
+                ></a>
+              </div>
+            </li>
+            <li class="property-card">
+              <img
+                class="media property-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="385"
+                alt="The Stokes Appartment"
+              />
+              <div class="property-card__body">
+                <h3 class="property-card__title">The Stokes Appartment</h3>
+                <p class="property-card__location">
+                  <svg width="11" height="13"><use href="#i-pin"></use></svg
+                  >Cleveland, United States
+                </p>
+                <p class="property-card__price">$2,32,120</p>
+                <a
+                  class="property-card__btn"
+                  href="#"
+                  aria-label="View property"
+                  ><svg width="24" height="12">
+                    <use href="#i-arrow-long"></use></svg
+                ></a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="featured__more">
+            <a class="btn btn--outline" href="#">Explore Property</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROMO BANNER ================= -->
+      <section class="promo">
+        <div class="container promo__inner">
+          <div class="promo-card">
+            <div class="promo-card__media">
+              <img
+                src="assets/images/promo-house.jpg"
+                width="110"
+                height="110"
+                alt="House on a green field"
+              />
+            </div>
+            <div class="promo-card__body">
+              <p class="promo-card__price">$4,000</p>
+              <p class="promo-card__address">242 Metric way</p>
+              <ul class="promo-card__specs">
+                <li>
+                  <img
+                    src="assets/icons/promo-bed.png"
+                    width="30"
+                    height="32"
+                    alt="Bedrooms"
+                  />2
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/promo-bath.png"
+                    width="30"
+                    height="32"
+                    alt="Bathrooms"
+                  />2
+                </li>
+                <li>
+                  <img
+                    src="assets/icons/promo-area.png"
+                    width="30"
+                    height="32"
+                    alt="Area"
+                  />500sqf
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="promo__unit">
+            <span>UNIT NO.</span>
+            <strong>9A</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TESTIMONIAL ================= -->
+      <section class="testimonial">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title">What our customers are saying</h2>
+            <p class="section-head__desc testimonial__desc">
+              We make sure you have a fine distance with the sickness. We make
+              you never lose hope.
+            </p>
+          </div>
+
+          <div class="testimonial__body">
+            <button
+              class="round-btn round-btn--outline testimonial__prev"
+              type="button"
+              aria-label="Previous"
+            >
+              <svg class="round-btn__icon">
+                <use href="#i-dot-arrow-left"></use>
+              </svg>
+            </button>
+
+            <div class="testimonial__media">
+              <img
+                class="media"
+                src="assets/images/placeholder.svg"
+                width="373"
+                height="435"
+                alt="Yunus Seyhan"
+              />
+            </div>
+
+            <blockquote class="testimonial__quote">
+              <img
+                class="testimonial__mark"
+                src="assets/icons/quote.png"
+                width="44"
+                height="30"
+                alt=""
+              />
+              <p class="testimonial__text">
+                We make sure you have a fine distance with the sickness. We make
+                you never lose hope. We make sure you have with the sickness.
+              </p>
+              <img
+                class="testimonial__stars"
+                src="assets/icons/stars.png"
+                width="148"
+                height="28"
+                alt="5 stars"
+              />
+              <footer>
+                <cite class="testimonial__name">Yunus Seyhan</cite>
+                <span class="testimonial__role">Postgraduate Student</span>
+              </footer>
+            </blockquote>
+
+            <button
+              class="round-btn round-btn--filled testimonial__next"
+              type="button"
+              aria-label="Next"
+            >
+              <svg class="round-btn__icon">
+                <use href="#i-dot-arrow-right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section class="projects">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title">
+              We build more projects <br />successful
+            </h2>
+          </div>
+
+          <ul class="projects__list">
+            <li class="project-card">
+              <h3 class="project-card__title">San Francisco, California</h3>
+              <a class="btn btn--white" href="#"
+                >See more
+                <svg class="btn__icon"><use href="#i-chevron"></use></svg
+              ></a>
+            </li>
+            <li class="project-card is-active">
+              <h3 class="project-card__title">Washington DC</h3>
+              <a class="btn btn--white" href="#"
+                >See more
+                <svg class="btn__icon"><use href="#i-chevron"></use></svg
+              ></a>
+            </li>
+            <li class="project-card">
+              <h3 class="project-card__title">Chicago</h3>
+              <a class="btn btn--white" href="#"
+                >See more
+                <svg class="btn__icon"><use href="#i-chevron"></use></svg
+              ></a>
+            </li>
+          </ul>
+
+          <form class="subscribe" action="#" method="post">
+            <label class="visually-hidden" for="subscribe-email">Email</label>
+            <svg
+              class="subscribe__icon"
+              width="27"
+              height="20"
+              viewBox="0 0 27 20"
+              aria-hidden="true"
+            >
+              <path
+                fill="#8D8D8D"
+                d="M0 0h27v20H0V0Zm1.6 1.6v.2L13.5 11l11.9-9.2v-.2H1.6Zm0 2.2v14.6h23.8V3.8L13.5 13 1.6 3.8Z"
+              />
+            </svg>
+            <input
+              class="subscribe__input"
+              type="email"
+              id="subscribe-email"
+              placeholder="Enter your email here"
+            />
+            <button class="btn btn--primary subscribe__btn" type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ================= BLOG ================= -->
+      <section class="blog">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="section-head__title section-head__title--muted">
+              From our blog
+            </h2>
+            <p class="section-head__desc blog__desc">
+              Find your suitable house here and stay safe and relaxe with
+              pleasure
+            </p>
+          </div>
+
+          <ul class="blog__grid">
+            <li class="post-card is-active">
+              <img
+                class="media post-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="242"
+                alt="How to rent a home very easily"
+              />
+              <div class="post-card__body">
+                <h3 class="post-card__title">
+                  <a href="#">How to rent a home very easily?</a>
+                </h3>
+                <p class="post-card__tag">
+                  <svg width="11" height="14">
+                    <use href="#i-bookmark"></use></svg
+                  >Rentals
+                </p>
+                <p class="post-card__excerpt">
+                  How to rent a home very easily in this pandemic situation. You
+                  can rent house through using our platfrom...
+                </p>
+                <ul class="post-card__meta">
+                  <li>
+                    <svg width="15" height="14">
+                      <use href="#i-calendar"></use></svg
+                    >3 years ago
+                  </li>
+                  <li>
+                    <svg width="12" height="14"><use href="#i-user"></use></svg
+                    >By <a class="text-primary" href="#">Mike Hesson</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="post-card">
+              <img
+                class="media post-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="242"
+                alt="How to rent a home very easily"
+              />
+              <div class="post-card__body">
+                <h3 class="post-card__title">
+                  <a href="#">How to rent a home very easily?</a>
+                </h3>
+                <p class="post-card__tag">
+                  <svg width="11" height="14">
+                    <use href="#i-bookmark"></use></svg
+                  >Rentals
+                </p>
+                <p class="post-card__excerpt">
+                  How to rent a home very easily in this pandemic situation. You
+                  can rent house through using our platfrom...
+                </p>
+                <ul class="post-card__meta">
+                  <li>
+                    <svg width="15" height="14">
+                      <use href="#i-calendar"></use></svg
+                    >3 years ago
+                  </li>
+                  <li>
+                    <svg width="12" height="14"><use href="#i-user"></use></svg
+                    >By <a class="text-primary" href="#">Mike Hesson</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="post-card">
+              <img
+                class="media post-card__image"
+                src="assets/images/placeholder.svg"
+                width="368"
+                height="242"
+                alt="How to rent a home very easily"
+              />
+              <div class="post-card__body">
+                <h3 class="post-card__title">
+                  <a href="#">How to rent a home very easily?</a>
+                </h3>
+                <p class="post-card__tag">
+                  <svg width="11" height="14">
+                    <use href="#i-bookmark"></use></svg
+                  >Rentals
+                </p>
+                <p class="post-card__excerpt">
+                  How to rent a home very easily in this pandemic situation. You
+                  can rent house through using our platfrom...
+                </p>
+                <ul class="post-card__meta">
+                  <li>
+                    <svg width="15" height="14">
+                      <use href="#i-calendar"></use></svg
+                    >3 years ago
+                  </li>
+                  <li>
+                    <svg width="12" height="14"><use href="#i-user"></use></svg
+                    >By <a class="text-primary" href="#">Mike Hesson</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="blog__more">
+            <a class="btn btn--outline" href="#">Read All</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-head__eyebrow">Contact with us</span>
+            <h2 class="section-head__title section-head__title--muted">
+              Looking For To Buy A Property?
+            </h2>
+          </div>
+
+          <div class="contact__inner">
+            <div class="contact__info">
+              <p class="contact__desc">
+                Browse our property listing and find your best and suitable home
+                or house for sale, rent and buying. It’s so easy and fast.
+              </p>
+              <ul class="check-list">
+                <li class="check-list__item">
+                  <svg width="14" height="11"><use href="#i-check"></use></svg
+                  >Archit ecto beatae vitae dicta sunt
+                </li>
+                <li class="check-list__item">
+                  <svg width="14" height="11"><use href="#i-check"></use></svg
+                  >Largest global RealEstate market
+                </li>
+                <li class="check-list__item">
+                  <svg width="14" height="11"><use href="#i-check"></use></svg
+                  >Nor again is there anyone
+                </li>
+              </ul>
+              <div class="contact__visual">
+                <img
+                  class="media contact__img contact__img--1"
+                  src="assets/images/placeholder.svg"
+                  width="278"
+                  height="203"
+                  alt="Apartment"
+                />
+                <img
+                  class="media contact__img contact__img--2"
+                  src="assets/images/placeholder.svg"
+                  width="432"
+                  height="238"
+                  alt="Villa"
+                />
+                <span class="contact__deco"></span>
+              </div>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+              <h3 class="contact-form__title">Contact Us</h3>
+              <div class="field">
+                <label class="field__label" for="contact-name">Name</label>
+                <input
+                  class="field__control"
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-email">Email</label>
+                <input
+                  class="field__control"
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="field">
+                <label class="field__label" for="contact-message"
+                  >Message</label
+                >
+                <textarea
+                  class="field__control"
+                  id="contact-message"
+                  name="message"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <button class="btn btn--primary contact-form__btn" type="submit">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <a href="./"
+              ><img
+                src="assets/images/logo-footer.png"
+                width="142"
+                height="38"
+                alt="Reanty."
+            /></a>
+            <p class="site-footer__about">
+              With over 1 million homes for sale available on the website.
+            </p>
+            <ul class="social site-footer__social">
+              <li>
+                <a class="social__link" href="#" aria-label="Linkedin"
+                  ><svg width="12" height="12">
+                    <use href="#i-linkedin"></use></svg
+                ></a>
+              </li>
+              <li>
+                <a class="social__link" href="#" aria-label="Facebook"
+                  ><svg width="7" height="12">
+                    <use href="#i-facebook"></use></svg
+                ></a>
+              </li>
+              <li>
+                <a class="social__link" href="#" aria-label="Twitter"
+                  ><svg width="13" height="11">
+                    <use href="#i-twitter"></use></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <nav class="footer-col" aria-label="Company">
+            <h3 class="footer-col__title">Company</h3>
+            <ul class="footer-col__list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">How we work?</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col footer-col--contact" aria-label="Contact">
+            <h3 class="footer-col__title">Contact</h3>
+            <ul class="footer-col__list">
+              <li><a href="#">Help/FAQ</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Affiliates</a></li>
+              <li><a href="#">Propert owners</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer-col footer-col--more" aria-label="More">
+            <h3 class="footer-col__title">More</h3>
+            <ul class="footer-col__list">
+              <li><a href="#">Land fees</a></li>
+              <li><a href="#">Property</a></li>
+              <li><a href="#">Law tips</a></li>
+              <li><a href="#">Nadges</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-col footer-col--office">
+            <h3 class="footer-col__title">Head Office</h3>
+            <address class="site-footer__address">
+              Xilliams Corner Wine © 2017. 1112 A Market St # Ste B22,
+              Charlottesville, CA 45565
+            </address>
+
+            <h3 class="footer-col__title site-footer__news-title">
+              News letter
+            </h3>
+            <form class="newsletter" action="#" method="post">
+              <label class="visually-hidden" for="newsletter-email"
+                >Email address</label
+              >
+              <input
+                class="newsletter__input"
+                type="email"
+                id="newsletter-email"
+                placeholder="Enter your email address"
+              />
+              <button
+                class="newsletter__btn"
+                type="submit"
+                aria-label="Subscribe"
+              >
+                <svg width="25" height="18" viewBox="0 0 25 18">
+                  <path
+                    fill="none"
+                    stroke="#FF5A3C"
+                    stroke-width="1.3"
+                    d="M1.5.7h22a.8.8 0 0 1 .8.8v15a.8.8 0 0 1-.8.8h-22a.8.8 0 0 1-.8-.8v-15a.8.8 0 0 1 .8-.8Zm-.6.5L12.5 10l11.6-8.8"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <a class="site-footer__contact" href="mailto:email@gmail.com"
+            >email@gmail.com</a
+          >
+          <a class="site-footer__contact" href="tel:1234567890"
+            >(123) 456-7890</a
+          >
+          <p class="site-footer__copy">
+            © 2021 Aeyman Megha All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
