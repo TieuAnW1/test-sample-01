@@ -966,3 +966,12 @@
     width: auto;
   }
 }
+
+@media (max-width: 767px) {
+  .scroll-top {
+    right: 16px;
+    bottom: 20px;
+    width: 38px;
+    height: 38px;
+  }
+}
