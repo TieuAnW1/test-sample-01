@@ -44,7 +44,7 @@
 .hero__squiggle {
   position: absolute;
   top: 0.8125em;
-  left: 1.1625em;
+  left: 0;
   z-index: -1;
   width: 3.5625em;
   max-width: none;
