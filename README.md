@@ -48,5 +48,5 @@ assets/
 
 As requested in the test email, the submission must include:
 
-- Test server URL: _add the URL after deploying_
-- Data server (source code link / folder on the server): _add the link_
+- Test server URL: https://test-sample-01.onrender.com
+- Data server (source code link / folder on the server): https://github.com/TieuAnW1/test-sample-01
