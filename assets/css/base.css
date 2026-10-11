@@ -132,6 +132,25 @@ button {
   border: 0;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 8px;
+  z-index: 10000;
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 0 0 4px 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .text-primary {
   color: var(--color-primary);
 }

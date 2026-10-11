@@ -33,19 +33,20 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- ================= HEADER ================= -->
     <header class="site-header">
       <div class="topbar">
         <div class="container container--wide topbar__inner">
           <ul class="topbar__contact">
             <li class="topbar__item">
-              <svg class="topbar__icon" width="16" height="13">
+              <svg class="topbar__icon" aria-hidden="true" width="16" height="13">
                 <use href="assets/icons/sprite.svg#i-mail"></use>
               </svg>
               <a href="mailto:Info@webmail.com">Info@webmail.com</a>
             </li>
             <li class="topbar__item">
-              <svg class="topbar__icon" width="14" height="17">
+              <svg class="topbar__icon" aria-hidden="true" width="14" height="17">
                 <use href="assets/icons/sprite.svg#i-pin"></use>
               </svg>
               <span>547 ns tower St. anglo City, USA</span>
@@ -54,27 +55,27 @@
           <ul class="social topbar__social">
             <li>
               <a class="social__link" href="#!" aria-label="Facebook">
-                <svg width="8" height="14">
+                <svg width="8" height="14" aria-hidden="true">
                   <use href="assets/icons/sprite.svg#i-facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a class="social__link is-active" href="#!" aria-label="Twitter"
-                ><svg width="16" height="13"><use href="assets/icons/sprite.svg#i-twitter"></use></svg></a>
+                ><svg width="16" height="13" aria-hidden="true"><use href="assets/icons/sprite.svg#i-twitter"></use></svg></a>
             </li>
             <li>
               <a class="social__link" href="#!" aria-label="Instagram"
-                ><svg width="14" height="14">
+                ><svg width="14" height="14" aria-hidden="true">
                   <use href="assets/icons/sprite.svg#i-instagram"></use></svg></a>
             </li>
             <li>
               <a class="social__link" href="#!" aria-label="Youtube"
-                ><svg width="18" height="13"><use href="assets/icons/sprite.svg#i-youtube"></use></svg></a>
+                ><svg width="18" height="13" aria-hidden="true"><use href="assets/icons/sprite.svg#i-youtube"></use></svg></a>
             </li>
             <li>
               <a class="social__link" href="#!" aria-label="Pinterest"
-                ><svg width="14" height="14">
+                ><svg width="14" height="14" aria-hidden="true">
                   <use href="assets/icons/sprite.svg#i-pinterest"></use></svg></a>
             </li>
           </ul>
@@ -103,7 +104,7 @@
 
           <nav class="navbar__menu" aria-label="Main">
             <ul class="navbar__list">
-              <li><a class="navbar__link is-active" href="#!">Home</a></li>
+              <li><a class="navbar__link is-active" href="#!" aria-current="page">Home</a></li>
               <li><a class="navbar__link" href="#about">About</a></li>
               <li><a class="navbar__link" href="#feature">Feature</a></li>
               <li><a class="navbar__link" href="#market">Market</a></li>
@@ -119,7 +120,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- ================= HERO ================= -->
       <section class="hero">
         <div class="container container--wide hero__inner">
@@ -142,10 +143,10 @@
             </p>
             <a class="btn btn--primary hero__btn" href="#!">
               Start membership
-              <svg class="btn__icon"><use href="assets/icons/sprite.svg#i-chevron"></use></svg>
+              <svg class="btn__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron"></use></svg>
             </a>
 
-            <div class="thumbs hero__thumbs">
+            <div class="thumbs hero__thumbs" aria-hidden="true">
               <ul class="thumbs__list">
                 <li class="thumbs__item thumbs__item--lg">
                   <span class="thumbs__label">HOUSE 1</span>
@@ -188,7 +189,7 @@
             <a class="hero__video" href="#!">
               How it works
               <span class="hero__play"
-                ><svg width="12" height="14"><use href="assets/icons/sprite.svg#i-play"></use></svg></span>
+                ><svg width="12" height="14" aria-hidden="true"><use href="assets/icons/sprite.svg#i-play"></use></svg></span>
             </a>
           </div>
         </div>
@@ -270,7 +271,7 @@
               alt="Bedroom"
             />
             <div class="dream__badge">
-              <svg width="30" height="29"><use href="assets/icons/sprite.svg#i-star"></use></svg>
+              <svg width="30" height="29" aria-hidden="true"><use href="assets/icons/sprite.svg#i-star"></use></svg>
               <span>5 Star Rating</span>
             </div>
           </div>
@@ -370,7 +371,7 @@
               <li class="bullet-list__item">Live Music concert at New York</li>
             </ul>
 
-            <div class="thumbs sells__thumbs">
+            <div class="thumbs sells__thumbs" aria-hidden="true">
               <ul class="thumbs__list">
                 <li class="thumbs__item sells__thumb sells__thumb--1">
                   <span class="thumbs__label">HOUSE 1</span>
@@ -445,7 +446,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
             <li class="service-card">
               <span class="icon-box service-card__icon"
@@ -461,7 +462,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
             <li class="service-card">
               <span class="icon-box service-card__icon"
@@ -477,7 +478,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
             <li class="service-card">
               <span class="icon-box service-card__icon"
@@ -493,7 +494,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
             <li class="service-card">
               <span class="icon-box service-card__icon"
@@ -509,7 +510,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
             <li class="service-card">
               <span class="icon-box service-card__icon"
@@ -525,7 +526,7 @@
               </p>
               <a class="link-more" href="#!"
                 >Learn more
-                <svg width="12" height="11"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
+                <svg width="12" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-arrow"></use></svg></a>
             </li>
           </ul>
         </div>
@@ -590,14 +591,14 @@
               <div class="property-card__body">
                 <h3 class="property-card__title">The Stokes Apartment</h3>
                 <p class="property-card__location">
-                  <svg width="11" height="13"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
+                  <svg width="11" height="13" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
                 </p>
                 <p class="property-card__price">$2,32,120</p>
                 <a
                   class="property-card__btn"
                   href="#!"
                   aria-label="View property"
-                  ><svg width="24" height="12">
+                  ><svg width="24" height="12" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-arrow-long"></use></svg></a>
               </div>
             </li>
@@ -612,14 +613,14 @@
               <div class="property-card__body">
                 <h3 class="property-card__title">The Stokes Apartment</h3>
                 <p class="property-card__location">
-                  <svg width="11" height="13"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
+                  <svg width="11" height="13" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
                 </p>
                 <p class="property-card__price">$2,32,120</p>
                 <a
                   class="property-card__btn"
                   href="#!"
                   aria-label="View property"
-                  ><svg width="24" height="12">
+                  ><svg width="24" height="12" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-arrow-long"></use></svg></a>
               </div>
             </li>
@@ -634,14 +635,14 @@
               <div class="property-card__body">
                 <h3 class="property-card__title">The Stokes Apartment</h3>
                 <p class="property-card__location">
-                  <svg width="11" height="13"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
+                  <svg width="11" height="13" aria-hidden="true"><use href="assets/icons/sprite.svg#i-pin"></use></svg>Cleveland, United States
                 </p>
                 <p class="property-card__price">$2,32,120</p>
                 <a
                   class="property-card__btn"
                   href="#!"
                   aria-label="View property"
-                  ><svg width="24" height="12">
+                  ><svg width="24" height="12" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-arrow-long"></use></svg></a>
               </div>
             </li>
@@ -720,7 +721,7 @@
               type="button"
               aria-label="Previous"
             >
-              <svg class="round-btn__icon">
+              <svg class="round-btn__icon" aria-hidden="true">
                 <use href="assets/icons/sprite.svg#i-dot-arrow-left"></use>
               </svg>
             </button>
@@ -766,7 +767,7 @@
               type="button"
               aria-label="Next"
             >
-              <svg class="round-btn__icon">
+              <svg class="round-btn__icon" aria-hidden="true">
                 <use href="assets/icons/sprite.svg#i-dot-arrow-right"></use>
               </svg>
             </button>
@@ -788,19 +789,19 @@
               <h3 class="project-card__title">San Francisco, California</h3>
               <a class="btn btn--white" href="#!"
                 >See more
-                <svg class="btn__icon"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
             </li>
             <li class="project-card is-active">
               <h3 class="project-card__title">Washington DC</h3>
               <a class="btn btn--white" href="#!"
                 >See more
-                <svg class="btn__icon"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
             </li>
             <li class="project-card">
               <h3 class="project-card__title">Chicago</h3>
               <a class="btn btn--white" href="#!"
                 >See more
-                <svg class="btn__icon"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
+                <svg class="btn__icon" aria-hidden="true"><use href="assets/icons/sprite.svg#i-chevron"></use></svg></a>
             </li>
           </ul>
 
@@ -858,7 +859,7 @@
                   <a href="#!">How to rent a home very easily?</a>
                 </h3>
                 <p class="post-card__tag">
-                  <svg width="11" height="14">
+                  <svg width="11" height="14" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-bookmark"></use></svg>Rentals
                 </p>
                 <p class="post-card__excerpt">
@@ -867,11 +868,11 @@
                 </p>
                 <ul class="post-card__meta">
                   <li>
-                    <svg width="15" height="14">
+                    <svg width="15" height="14" aria-hidden="true">
                       <use href="assets/icons/sprite.svg#i-calendar"></use></svg>3 years ago
                   </li>
                   <li>
-                    <svg width="12" height="14"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
+                    <svg width="12" height="14" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
                   </li>
                 </ul>
               </div>
@@ -889,7 +890,7 @@
                   <a href="#!">How to rent a home very easily?</a>
                 </h3>
                 <p class="post-card__tag">
-                  <svg width="11" height="14">
+                  <svg width="11" height="14" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-bookmark"></use></svg>Rentals
                 </p>
                 <p class="post-card__excerpt">
@@ -898,11 +899,11 @@
                 </p>
                 <ul class="post-card__meta">
                   <li>
-                    <svg width="15" height="14">
+                    <svg width="15" height="14" aria-hidden="true">
                       <use href="assets/icons/sprite.svg#i-calendar"></use></svg>3 years ago
                   </li>
                   <li>
-                    <svg width="12" height="14"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
+                    <svg width="12" height="14" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
                   </li>
                 </ul>
               </div>
@@ -920,7 +921,7 @@
                   <a href="#!">How to rent a home very easily?</a>
                 </h3>
                 <p class="post-card__tag">
-                  <svg width="11" height="14">
+                  <svg width="11" height="14" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-bookmark"></use></svg>Rentals
                 </p>
                 <p class="post-card__excerpt">
@@ -929,11 +930,11 @@
                 </p>
                 <ul class="post-card__meta">
                   <li>
-                    <svg width="15" height="14">
+                    <svg width="15" height="14" aria-hidden="true">
                       <use href="assets/icons/sprite.svg#i-calendar"></use></svg>3 years ago
                   </li>
                   <li>
-                    <svg width="12" height="14"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
+                    <svg width="12" height="14" aria-hidden="true"><use href="assets/icons/sprite.svg#i-user"></use></svg>By <a class="text-primary" href="#!">Mike Hesson</a>
                   </li>
                 </ul>
               </div>
@@ -964,13 +965,13 @@
               </p>
               <ul class="check-list">
                 <li class="check-list__item">
-                  <svg width="14" height="11"><use href="assets/icons/sprite.svg#i-check"></use></svg>Archit ecto beatae vitae dicta sunt
+                  <svg width="14" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Archit ecto beatae vitae dicta sunt
                 </li>
                 <li class="check-list__item">
-                  <svg width="14" height="11"><use href="assets/icons/sprite.svg#i-check"></use></svg>Largest global RealEstate market
+                  <svg width="14" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Largest global RealEstate market
                 </li>
                 <li class="check-list__item">
-                  <svg width="14" height="11"><use href="assets/icons/sprite.svg#i-check"></use></svg>Nor again is there anyone
+                  <svg width="14" height="11" aria-hidden="true"><use href="assets/icons/sprite.svg#i-check"></use></svg>Nor again is there anyone
                 </li>
               </ul>
               <div class="contact__visual">
@@ -1052,17 +1053,17 @@
             <ul class="social site-footer__social">
               <li>
                 <a class="social__link" href="#!" aria-label="Linkedin"
-                  ><svg width="12" height="12">
+                  ><svg width="12" height="12" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-linkedin"></use></svg></a>
               </li>
               <li>
                 <a class="social__link" href="#!" aria-label="Facebook"
-                  ><svg width="7" height="12">
+                  ><svg width="7" height="12" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-facebook"></use></svg></a>
               </li>
               <li>
                 <a class="social__link" href="#!" aria-label="Twitter"
-                  ><svg width="13" height="11">
+                  ><svg width="13" height="11" aria-hidden="true">
                     <use href="assets/icons/sprite.svg#i-twitter"></use></svg></a>
               </li>
             </ul>
